@@ -4,7 +4,7 @@
 
 # Getting Started
 
-First of all, you will have to download the package from the AssetsStore. Once you have dowloaded and imported the assets you will need to configure... no, wait. That's all! :D
+First of all, you will have to download the package from the [AssetsStore](http://u3d.as/8bb). Once you have dowloaded and imported the assets you will need to configure... no, wait. That's all! :+1:
 
 # Using SimpleGesture class
 
