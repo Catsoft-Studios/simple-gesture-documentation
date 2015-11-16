@@ -187,3 +187,73 @@ SimpleGesture.On9AxisSwipeRight(MyCallback);
 ```
 SimpleGesture.On9AxisSwipeLeft(MyCallback);
 ```
+
+### On9AxisSwipeDiagonalRightUp
+
+`On9AxisSwipeDiagonalRightUp` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+```
+SimpleGesture.On9AxisSwipeDiagonalRightUp(MyCallback);
+```
+
+### On9AxisSwipeDiagonalRightDown
+
+`On9AxisSwipeDiagonalRightDown` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+```
+SimpleGesture.On9AxisSwipeDiagonalRightDown(MyCallback);
+```
+
+### On9AxisSwipeDiagonalLeftUp
+
+`On9AxisSwipeDiagonalLeftUp` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+```
+SimpleGesture.On9AxisSwipeDiagonalLeftUp(MyCallback);
+```
+
+### On9AxisSwipeDiagonalLeftDown
+
+`On9AxisSwipeDiagonalLeftDown` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+```
+SimpleGesture.On9AxisSwipeDiagonalLeftDown(MyCallback);
+```
+
+## Flick Swipes
+
+Flick Swipes act like the other swipe methods, but they don't wait for the finger to be lifted. Instead, as soon as the gesture is recognized as a swipe, the flick swipes are triggered.
+
+![4 Axis Swipe Quadrants](https://raw.githubusercontent.com/Catsoft-Studios/simple-gesture-documentation/master/Media/swipe4axis.png)
+
+### On4AxisSwipeUp
+
+`On4AxisSwipeUp` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+```
+SimpleGesture.On4AxisSwipeUp(MyCallback);
+```
+
+### On4AxisSwipeDown
+
+`On4AxisSwipeDown` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+```
+SimpleGesture.On4AxisSwipeDown(MyCallback);
+```
+
+### On4AxisSwipeRight
+
+`On4AxisSwipeRight` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+```
+SimpleGesture.On4AxisSwipeRight(MyCallback);
+```
+
+### On4AxisSwipeLeft
+
+`On4AxisSwipeLeft` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+```
+SimpleGesture.On4AxisSwipeLeft(MyCallback);
+```
