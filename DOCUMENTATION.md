@@ -74,7 +74,7 @@ SimpleGesture.OnLongTap(MyCallback);
 
 If you want to know more information about this gesture, simply add a `GestureInfoTap` parameter type at your custom function, and SimpleGesture will provide more information about the gesture detected. In particular, `GestureInfoTap` provides:
 
-``` cs
+```
 public class GestureInfoTap {
 	public Vector2 position;
 	public float duration;
@@ -98,5 +98,30 @@ public void MyTapCallback(GestureInfoTap gesture) {
 }
 ```
 
+# Swipe Gestures
 
+## Generic Swipe
 
+**Swipe Gestures** are triggered after *drawing* a straight line with one finger.
+
+### OnSwipe
+
+`OnSwipe` is triggered when a finger *swipes* in any direction around the screen and after the finger is lifted.
+
+``` cs
+SimpleGesture.OnSwipe(MyCallback);
+```
+
+## 4 Axis Swipes
+
+4 axis swipes are methods that detect swipes in only 4 directions (up, right, down and left). To decide the direction of the swipe, the space is divided in 4 quadrants, each with an angle of 90º.
+
+![4 Axis Swipe Quadrants]()
+
+### On4AxisSwipeUp
+
+`On4AxisSwipeUp` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+``` cs
+SimpleGesture.OnSwipe(MyCallback);
+```
