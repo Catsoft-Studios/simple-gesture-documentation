@@ -42,9 +42,11 @@ All these methods are described in detail below.
 
 # Tap Gestures
 
+## Methods
+
 **Tap Gestures** are triggered when the user touches the screen and lifts the finger without barely moving.
 
-## OnTap
+### OnTap
 
 `OnTap` detects when a finger *clicks* the screen, without taking into acount the time the finger stays on the screen.
 
@@ -52,7 +54,7 @@ All these methods are described in detail below.
 SimpleGesture.OnTap(MyCallback);
 ```
 
-##OnShortTap
+###OnShortTap
 
 `OnShortTap` detects when a finger *clicks* the screen, but the time between the first touch and the release of the finger is **less** than 0.5 seconds.
 
@@ -60,7 +62,7 @@ SimpleGesture.OnTap(MyCallback);
 SimpleGesture.OnShortTap(MyCallback);
 ```
 
-##OnLongTap
+###OnLongTap
 
 `OnShortTap` detects when a finger *clicks* the screen, but the time between the first touch and the release of the finger is **greater** than 0.5 seconds.
 
@@ -82,10 +84,19 @@ public class GestureInfoTap {
 * **[Vector2] position**: The position of the touch in screen-space.
 * **[float] duration**: The duration of the tap (in seconds).
 
+**Example:**
 
+``` cs
+public void Awake() {
+	SimpleGesture.OnTap(MyTapCallback);
+}
 
-
-
+public void MyTapCallback(GestureInfoTap gesture) {
+	Debug.Log("Tap!");
+	Debug.Log("Position:" + gesture.position);
+	Debug.Log("Duration:" + gesture.duration);
+}
+```
 
 
 
