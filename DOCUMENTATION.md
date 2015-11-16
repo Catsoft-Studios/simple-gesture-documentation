@@ -257,3 +257,67 @@ SimpleGesture.On4AxisFlickSwipeRight(MyCallback);
 ```
 SimpleGesture.On4AxisFlickSwipeLeft(MyCallback);
 ```
+
+### On9AxisFlickSwipeUp
+
+`On9AxisFlickSwipeUp` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
+
+```
+SimpleGesture.On9AxisFlickSwipeUp(MyCallback);
+```
+
+### On9AxisFlickSwipeDown
+
+`On9AxisFlickSwipeDown` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
+
+```
+SimpleGesture.On9AxisFlickSwipeDown(MyCallback);
+```
+
+### On9AxisFlickSwipeRight
+
+`On9AxisFlickSwipeRight` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
+
+```
+SimpleGesture.On9AxisFlickSwipeRight(MyCallback);
+```
+
+### On9AxisFlickSwipeLeft
+
+`On9AxisFlickSwipeLeft` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
+
+```
+SimpleGesture.On9AxisFlickSwipeLeft(MyCallback);
+```
+
+### On9AxisFlickSwipeRightUp
+
+`On9AxisFlickSwipeRightUp` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
+
+```
+SimpleGesture.On9AxisFlickSwipeRightUp(MyCallback);
+```
+
+### On9AxisFlickSwipeRightDown
+
+`On9AxisFlickSwipeRightDown` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
+
+```
+SimpleGesture.On9AxisFlickSwipeRightDown(MyCallback);
+```
+
+### On9AxisFlickSwipeLeftUp
+
+`On9AxisFlickSwipeLeftUp` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
+
+```
+SimpleGesture.On9AxisFlickSwipeLeftUp(MyCallback);
+```
+
+### On9AxisFlickSwipeLeftDown
+
+`On9AxisFlickSwipeLeftDown` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
+
+```
+SimpleGesture.On9AxisFlickSwipeLeftDown(MyCallback);
+```
