@@ -116,7 +116,7 @@ SimpleGesture.OnSwipe(MyCallback);
 
 4 axis swipes are methods that detect swipes in only 4 directions (up, right, down and left). To decide the direction of the swipe, the space is divided in 4 quadrants, each with an angle of 90º.
 
-![4 Axis Swipe Quadrants]()
+![4 Axis Swipe Quadrants](https://raw.githubusercontent.com/Catsoft-Studios/simple-gesture-documentation/master/Media/swipe4axis.png)
 
 ### On4AxisSwipeUp
 
