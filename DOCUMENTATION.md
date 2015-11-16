@@ -123,5 +123,30 @@ SimpleGesture.OnSwipe(MyCallback);
 `On4AxisSwipeUp` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
 
 ``` cs
-SimpleGesture.OnSwipe(MyCallback);
+SimpleGesture.On4AxisSwipeUp(MyCallback);
 ```
+
+### On4AxisSwipeDown
+
+`On4AxisSwipeDown` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+``` cs
+SimpleGesture.On4AxisSwipeDown(MyCallback);
+```
+
+### On4AxisSwipeRight
+
+`On4AxisSwipeRight` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+``` cs
+SimpleGesture.On4AxisSwipeRight(MyCallback);
+```
+
+### On4AxisSwipeLeft
+
+`On4AxisSwipeLeft` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+
+``` cs
+SimpleGesture.On4AxisSwipeLeft(MyCallback);
+```
+
