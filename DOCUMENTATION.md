@@ -77,6 +77,7 @@ public class GestureInfoTap {
 	public Vector2 position;
 	public float duration;
 }
+```
 
 * **position** [Vector2] : The position of the touch in screen-space.
 * **duration** [float] : The duration of the tap (in seconds).
