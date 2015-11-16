@@ -46,14 +46,27 @@ All these methods are described in detail below.
 
 ## OnTap
 
-`OnTap` is called when a finger "clicks" the screen, without taking into acount the time the finger stays on the screen.
+`OnTap` detects when a finger *clicks* the screen, without taking into acount the time the finger stays on the screen.
 
 ``` cs
 SimpleGesture.OnTap(MyCallback);
 ```
 
+##OnShortTap
 
+`OnShortTap` detects when a finger *clicks* the screen, but the time between the first touch and the release of the finger is **less** than 0.5 seconds.
 
+``` cs
+SimpleGesture.OnShortTap(MyCallback);
+```
+
+##OnLongTap
+
+`OnShortTap` detects when a finger *clicks* the screen, but the time between the first touch and the release of the finger is **greater** than 0.5 seconds.
+
+``` cs
+SimpleGesture.OnLongTap(MyCallback);
+```
 
 
 
