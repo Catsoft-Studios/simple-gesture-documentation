@@ -6,7 +6,7 @@
 
 First of all, you will have to download the package from the [AssetsStore](http://u3d.as/8bb). Once you have dowloaded and imported the assets you will need to configure... no, wait. That's all! :-D
 
-## Using SimpleGesture class
+## The SimpleGesture class
 
 If you open the **SimpleGesture** main folder you will see a bunch of folders that contain other folders, with scripts and more scripts. For the moment, just forget about it. All you need to know is that there's a class called SimpleGesture, and this is everything you'll need.
 
@@ -67,6 +67,19 @@ SimpleGesture.OnShortTap(MyCallback);
 ``` cs
 SimpleGesture.OnLongTap(MyCallback);
 ```
+
+## More information
+
+If you want to know more information about this gesture, simply add a `GestureInfoTap` parameter type at your custom function, and SimpleGesture will provide more information about the gesture detected. In particular, `GestureInfoTap` provides:
+
+``` cs
+public class GestureInfoTap {
+	public Vector2 position;
+	public float duration;
+}
+
+* **position** [Vector2] : The position of the touch in screen-space.
+* **duration** [float] : The duration of the tap (in seconds).
 
 
 
