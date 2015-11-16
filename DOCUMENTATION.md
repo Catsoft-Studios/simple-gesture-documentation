@@ -224,36 +224,36 @@ SimpleGesture.On9AxisSwipeDiagonalLeftDown(MyCallback);
 
 Flick Swipes act like the other swipe methods, but they don't wait for the finger to be lifted. Instead, as soon as the gesture is recognized as a swipe, the flick swipes are triggered.
 
-![4 Axis Swipe Quadrants](https://raw.githubusercontent.com/Catsoft-Studios/simple-gesture-documentation/master/Media/swipe4axis.png)
+![Flick Swipe explanation](https://raw.githubusercontent.com/Catsoft-Studios/simple-gesture-documentation/master/Media/flickswipe.png)
 
-### On4AxisSwipeUp
+### On4AxisFlickSwipeUp
 
-`On4AxisSwipeUp` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
-
-```
-SimpleGesture.On4AxisSwipeUp(MyCallback);
-```
-
-### On4AxisSwipeDown
-
-`On4AxisSwipeDown` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+`On4AxisFlickSwipeUp` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
 
 ```
-SimpleGesture.On4AxisSwipeDown(MyCallback);
+SimpleGesture.On4AxisFlickSwipeUp(MyCallback);
 ```
 
-### On4AxisSwipeRight
+### On4AxisFlickSwipeDown
 
-`On4AxisSwipeRight` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
-
-```
-SimpleGesture.On4AxisSwipeRight(MyCallback);
-```
-
-### On4AxisSwipeLeft
-
-`On4AxisSwipeLeft` is triggered when a finger *swipes* up around the screen and after the finger is lifted.
+`On4AxisFlickSwipeDown` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
 
 ```
-SimpleGesture.On4AxisSwipeLeft(MyCallback);
+SimpleGesture.On4AxisFlickSwipeDown(MyCallback);
+```
+
+### On4AxisFlickSwipeRight
+
+`On4AxisFlickSwipeRight` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
+
+```
+SimpleGesture.On4AxisFlickSwipeRight(MyCallback);
+```
+
+### On4AxisFlickSwipeLeft
+
+`On4AxisFlickSwipeLeft` is triggered when a finger *swipes* up around the screen and as soon as there is enough information to know the gesture is a swipe.
+
+```
+SimpleGesture.On4AxisFlickSwipeLeft(MyCallback);
 ```
