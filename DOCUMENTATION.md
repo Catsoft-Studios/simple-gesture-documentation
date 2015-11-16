@@ -430,3 +430,136 @@ public void MyZigZagCallback(GestureInfoZigZag gesture) {
 }
 ```
 
+# Continuous Gestures
+
+## Methods
+
+**Continuous Gestures** are triggered constantly as long as the finger/s is/are moving. For example, panning is a continuous gesture, because it is triggered while the finger is moving, and not when the finger is lifted (it wouldn't make any sense).
+
+### While1FingerPanning
+
+`While1FingerPanning` detects when a finger moves around the screen.
+
+``` cs
+SimpleGesture.While1FingerPanning(MyCallback);
+```
+
+###WhilePanning
+
+`WhilePanning` detects when 2 or more fingers move together around the screen.
+
+``` cs
+SimpleGesture.WhilePanning(MyCallback);
+```
+
+###WhilePinching
+
+`WhilePanning` detects when 2 fingers pinch the screen (zoom out).
+
+``` cs
+SimpleGesture.WhilePinching(MyCallback);
+```
+
+###WhileStretching
+
+`WhileStretching` detects when 2 fingers stretch the screen (zoom in).
+
+``` cs
+SimpleGesture.WhileStretching(MyCallback);
+```
+
+###WhileTwisting
+
+`WhileTwisting` detects when 2 fingers rotate around a pivot.
+
+``` cs
+SimpleGesture.WhileTwisting(MyCallback);
+```
+
+## More information
+
+If you want to know more information about this gesture, simply add a `GestureInfoPan` / `GestureInfoZoom` / `GestureInfoTwist` parameter type at your custom function, and SimpleGesture will provide more information about the gesture detected.
+
+In particular, `GestureInfoPan`, from `While1FingerPanning` and `WhilePanning` provides:
+
+```
+public class GestureInfoPan {
+	public Vector2 deltaDirection;
+}
+```
+
+* **[Vector2] deltaDirection**: The direction (and amount of movement) of the panning since the last event fired. No need to multiply by Time.deltaTime, as it's already frame-based.
+
+**Example:**
+
+``` cs
+public void Awake() {
+	SimpleGesture.WhilePanning(MyPanCallback);
+}
+
+public void MyPanCallback(GestureInfoPan gesture) {
+	Debug.Log("Panning!");
+	Debug.Log("movement:" + gesture.deltaDirection);
+}
+```
+
+On the other hand, `WhilePinching` and `WhileStretching` provide the following class info:
+
+```
+public class GestureInfoZoom {
+	public float deltaDistance;
+	public Vector2 center;
+	public Vector2 position1;
+	public Vector2 position2;
+}
+```
+
+* **[float] deltaDistace**: The amount of distance movemtn since the last zoom event. No need to multiply by Time.deltaTime, as it's already frame-based.
+* **[Vector2] center**: The pivot where the zoom focuses.
+* **[Vector2] position1**: The position of finger 1.
+* **[Vector2] position2**: The position of finger 2.
+
+**Example:**
+
+``` cs
+public void Awake() {
+	SimpleGesture.WhilePinching(MyZoomCallback);
+}
+
+public void MyZoomCallback(GestureInfoZoom gesture) {
+	Debug.Log("Pinching!");
+	Debug.Log("Center:" + gesture.center);
+}
+```
+
+And for the `WhileTwisting` detector, the information retrieved is:
+
+```
+public class GestureInfoTwist {
+	public float deltaDistance;
+	public Vector2 center;
+	public Vector2 position1;
+	public Vector2 position2;
+	public bool clockwise;
+}
+```
+
+* **[float] deltaDistace**: The amount of distance movemtn since the last zoom event. No need to multiply by Time.deltaTime, as it's already frame-based.
+* **[Vector2] center**: The pivot where the zoom focuses.
+* **[Vector2] position1**: The position of finger 1.
+* **[Vector2] position2**: The position of finger 2.
+* **[bool] clockwise**: Whether the twisiting is clockwise (true) or counter-clockwise (false).
+
+**Example:**
+
+``` cs
+public void Awake() {
+	SimpleGesture.WhileTwisting(MyTwistCallback);
+}
+
+public void MyTwistCallback(GestureInfoTwist gesture) {
+	Debug.Log("Twisting!");
+	Debug.Log("Center:" + gesture.center);
+	Debug.Log("Is Clockwise?:" + gesture.clockwise);
+}
+```
