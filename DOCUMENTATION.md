@@ -34,9 +34,9 @@ public void MyMethod()
 
 **Simple Gesture** has many methods to detect a wide variety of gestures. But there's a common naming convention between all of them.
 
-* **discrete gestures:** discrete methods are methods that happen once the user has lifted the finger, such as taps, circles, zig-zags, etc. All this methods begin with the *On* prefix: (`OnTap`, `OnSwipe`, ...).
-* **Continuous gestures: ** These methods deal with gestures that continuously happen while the user moves the finger around the screen. These methods begin with the *While* prefix and a gerund as the gesture verb: (`WhilePanning`, `WhileTwisting`, ...).
-* **Stop detection: ** Sometimes you will want to stop detecting certain gestures. These methods begin with the *Stop* prefix: (`StopTap`, `StopPanning`, ...).
+- **Discrete gestures:** discrete methods are methods that happen once the user has lifted the finger, such as taps, circles, zig-zags, etc. All this methods begin with the **On** prefix: (`OnTap`, `OnSwipe`, ...).
+- **Continuous gestures:** These methods deal with gestures that continuously happen while the user moves the finger around the screen. These methods begin with the **While** prefix and a gerund as the gesture verb: (`WhilePanning`, `WhileTwisting`, ...).
+- **Stop detection:** Sometimes you will want to stop detecting certain gestures. These methods begin with the **Stop** prefix: (`StopTap`, `StopPanning`, ...).
 
 All these methods are described in detail below.
 
