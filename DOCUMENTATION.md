@@ -321,3 +321,36 @@ SimpleGesture.On9AxisFlickSwipeLeftUp(MyCallback);
 ```
 SimpleGesture.On9AxisFlickSwipeLeftDown(MyCallback);
 ```
+
+## More information
+
+If you want to know more information about this gesture, simply add a `GestureInfoSwipe` parameter type at your custom function, and SimpleGesture will provide more information about the gesture detected. In particular, `GestureInfoSwipe` provides:
+
+```
+public class GestureInfoSwipe {
+	public Vector2 direction;
+	public float distance;
+	public Vector2 firstPosition;
+	public Vector2 endPosition;
+}
+```
+
+* **[Vector2] direction**: The average normalized direction of the swipe in screen-space.
+* **[float] distance**: The distance of the swipe.
+* **[Vector2] firstPosition**: The position of this gesture's first touch.
+* **[Vector2] lastPosition**: The position of this gesture's last touch.
+
+**Example:**
+
+``` cs
+public void Awake() {
+	SimpleGesture.On4AxisSwipeLeft(MySwipeLeftCallback);
+}
+
+public void MySwipeLeftCallback(GestureInfoSwipe gesture) {
+	Debug.Log("Left Swipe!");
+	Debug.Log("Direction:" + gesture.direction);
+	Debug.Log("distance:" + gesture.distance);
+}
+```
+
