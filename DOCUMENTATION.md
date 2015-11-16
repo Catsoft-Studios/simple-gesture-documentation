@@ -342,7 +342,7 @@ public class GestureInfoSwipe {
 
 **Example:**
 
-``` cs
+```
 public void Awake() {
 	SimpleGesture.On4AxisSwipeLeft(MySwipeLeftCallback);
 }
@@ -351,6 +351,82 @@ public void MySwipeLeftCallback(GestureInfoSwipe gesture) {
 	Debug.Log("Left Swipe!");
 	Debug.Log("Direction:" + gesture.direction);
 	Debug.Log("distance:" + gesture.distance);
+}
+```
+
+# Shape Gestures
+
+## Methods
+
+**Shape Gestures** are triggered when SimpleGesture detects a certain shape *drawn* with the finger.
+
+### OnCircle
+
+`OnCircle` detects when a finger *draws* a circle on the touch-screen.
+
+``` cs
+SimpleGesture.OnCircle(MyCallback);
+```
+
+###OnZigZag
+
+`OnZigZag` detects when a finger *draws* a zig-zag on the touch-screen of at least 3 edges.
+
+``` cs
+SimpleGesture.OnZigZag(MyCallback);
+```
+
+## More information
+
+If you want to know more information about this gesture, simply add a `GestureInfoCircle`/`GestureInfoZigZag` parameter type at your custom function, and SimpleGesture will provide more information about the gesture detected. In particular, `GestureInfoCircle` provides:
+
+```
+public class GestureInfoCircle {
+	public Vector2 center;
+	public float radius;
+}
+```
+
+* **[Vector2] center**: The average center of the circle drawn in screen-space.
+* **[float] radius**: The average radius of the circle drawn in screen-space.
+
+**Example:**
+
+``` cs
+public void Awake() {
+	SimpleGesture.OnCircle(MyCircleCallback);
+}
+
+public void MyCircleCallback(GestureInfoCircle gesture) {
+	Debug.Log("Circle!");
+	Debug.Log("Center:" + gesture.center);
+	Debug.Log("Radius:" + gesture.radius);
+}
+```
+
+And `GestureInfoZigZag` provides:
+
+```
+public class GestureInfoZigZag {
+	public Vector2 direction;
+	public float distance;
+}
+```
+
+* **[Vector2] direction**: The average direction of the zig-zag drawn.
+* **[float] distance**: The distance of the zig-zag.
+
+**Example:**
+
+``` cs
+public void Awake() {
+	SimpleGesture.OnZigZag(MyZigZagCallback);
+}
+
+public void MyZigZagCallback(GestureInfoZigZag gesture) {
+	Debug.Log("ZigZag!");
+	Debug.Log("Direction:" + gesture.direction);
+	Debug.Log("Distance:" + gesture.distance);
 }
 ```
 
