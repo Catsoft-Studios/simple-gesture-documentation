@@ -12,7 +12,7 @@ If you open the **SimpleGesture** main folder you will see a bunch of folders th
 
 ## Hello World!
 
-But let's see how this works. Create a new script and attach it to a **Game Object**. Inside the script, look for the `Awake` method and add the following line of code. This line of code will tell the `SimpleGesture` framework that, everytime a *tap* gesture is detected, call the method named `MyMethod`.
+But let's see how this works. Create a new script and attach it to a **Game Object**. Inside the script, look for the `Awake` method and add the following line of code. This line of code will tell the `SimpleGesture` framework that, everytime a *tap* gesture is detected, call the custom method named `MyMethod`.
 
 ``` cs
 public void Awake()
@@ -34,11 +34,29 @@ public void MyMethod()
 
 **Simple Gesture** has many methods to detect a wide variety of gestures. But there's a common naming convention between all of them.
 
-* **Discreete gestures:** Discreete methods are methods that happen once the user has lifted the finger, such as taps, circles, zig-zags, etc. All this methods begin with the *On* prefix: (`OnTap`, `OnSwipe`, ...).
+* **discrete gestures:** discrete methods are methods that happen once the user has lifted the finger, such as taps, circles, zig-zags, etc. All this methods begin with the *On* prefix: (`OnTap`, `OnSwipe`, ...).
 * **Continuous gestures: ** These methods deal with gestures that continuously happen while the user moves the finger around the screen. These methods begin with the *While* prefix and a gerund as the gesture verb: (`WhilePanning`, `WhileTwisting`, ...).
 * **Stop detection: ** Sometimes you will want to stop detecting certain gestures. These methods begin with the *Stop* prefix: (`StopTap`, `StopPanning`, ...).
 
 All these methods are described in detail below.
+
+# Tap Gestures
+
+**Tap Gestures** are triggered when the user touches the screen and lifts the finger without barely moving.
+
+## OnTap
+
+`OnTap` is called when a finger "clicks" the screen, without taking into acount the time the finger stays on the screen.
+
+``` cs
+SimpleGesture.OnTap(MyCallback);
+```
+
+
+
+
+
+
 
 
 
