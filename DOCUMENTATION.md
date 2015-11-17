@@ -30,6 +30,8 @@ public void MyMethod()
 }
 ```
 
+**IMPORTANT NOTE!** Don't add the **Simple Gesture** script to any component. This plugin is smart enough to know if other scene scripts are using it. If so, an instance of the plugin's base class is created automatically.
+
 ## Methods Overview
 
 **Simple Gesture** has many methods to detect a wide variety of gestures. But there's a common naming convention between all of them.
