@@ -456,7 +456,7 @@ SimpleGesture.WhilePanning(MyCallback);
 
 ###WhilePinching
 
-`WhilePanning` detects when 2 fingers pinch the screen (zoom out).
+`WhilePinching` detects when 2 fingers pinch the screen (zoom out).
 
 ``` cs
 SimpleGesture.WhilePinching(MyCallback);
