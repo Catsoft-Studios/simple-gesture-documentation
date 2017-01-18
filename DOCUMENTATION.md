@@ -72,6 +72,14 @@ SimpleGesture.OnShortTap(MyCallback);
 SimpleGesture.OnLongTap(MyCallback);
 ```
 
+### OnDoubleTap
+
+`OnDoubleTap` detects when a finger *clicks* the screen a second time within a short time span (half a second by default).
+
+``` cs
+SimpleGesture.OnDoubleTap(MyCallback);
+```
+
 ## More information
 
 If you want to know more information about this gesture, simply add a `GestureInfoTap` parameter type at your custom function, and SimpleGesture will provide more information about the gesture detected. In particular, `GestureInfoTap` provides:
